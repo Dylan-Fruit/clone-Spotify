@@ -1,0 +1,96 @@
+{
+  "artists": [
+    {
+      "name": "The Weeknd",
+      "image": "./assets/the_weeknd.webp",
+      "alt": "the weeknd picture"
+    },
+    {
+      "name": "6LACK",
+      "image": "./assets/6lack.webp",
+      "alt": "6lack picture"
+    },
+    {
+      "name": "Taylor Swift",
+      "image": "./assets/taylor_swift.webp",
+      "alt": "Taylor Swift picture"
+    },
+    {
+      "name": "Juice WRLD",
+      "image": "./assets/juice_wrld.webp",
+      "alt": "Juice WRLD picture"
+    },
+    {
+      "name": "PNL",
+      "image": "./assets/pnl.webp",
+      "alt": "PNL picture"
+    }
+  ],
+  "playlists": [
+    {
+      "name": "This is Post Malone",
+      "image": "./assets/this_is_post_malone.jpg",
+      "alt": "this is post malone picture",
+      "type": "Playlist",
+      "creator": "Spotify"
+    },
+    {
+      "name": "Into the Music-verse",
+      "image": "./assets/spidey.webp",
+      "alt": "into the music verse picture",
+      "type": "Playlist",
+      "creator": "Dylan"
+    },
+    {
+      "name": "Travis 🎢🪐",
+      "image": "./assets/travis.webp",
+      "alt": "travis playlist picture",
+      "type": "Playlist",
+      "creator": "Dylan"
+    },
+    {
+      "name": "The Witcher 3",
+      "image": "./assets/the_witcher.webp",
+      "alt": "the witcher playlist picture",
+      "type": "Playlist",
+      "creator": "Dylan"
+    }
+  ],
+  "albums": [
+    {
+      "name": "My Dear Melancholy,",
+      "image": "./assets/mdm.webp",
+      "alt": "my dear melancholy cover",
+      "type": "Album",
+      "creator": "The Weeknd"
+    },
+    {
+      "name": "Midnights",
+      "image": "./assets/midnights.webp",
+      "alt": "midnights cover",
+      "type": "Album",
+      "creator": "Taylor Swift"
+    },
+    {
+      "name": "Deux Frères",
+      "image": "./assets/deux_frères.webp",
+      "alt": "deux frères cover",
+      "type": "Album",
+      "creator": "PNL"
+    },
+    {
+      "name": "Fighting Demons",
+      "image": "./assets/fighting_demons.webp",
+      "alt": "fighting demons cover",
+      "type": "Album",
+      "creator": "Juice WRLD"
+    },
+    {
+      "name": "Hollywood's Bleeding",
+      "image": "./assets/hollywood_bleeding.webp",
+      "alt": "hollywood bleeding cover",
+      "type": "Album",
+      "creator": "Post Malone"
+    }
+  ]
+}

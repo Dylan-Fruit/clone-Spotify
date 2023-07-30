@@ -1,0 +1,9 @@
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: $secondary_color;
+  line-height: 1.6;
+  .content {
+    display: flex;
+  }
+}
