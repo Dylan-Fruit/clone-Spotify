@@ -110,7 +110,7 @@ function displayAlbums(albums) {
 
 function displayRecently(recently) {
   const recentlyListened = document.getElementById("recently-list");
-  recently.forEach((recent) => {
+  recently.forEach((recent, index) => {
     const liRecent = document.createElement("li");
     const divRecent = document.createElement("div");
     const divRecentContent = document.createElement("div");
@@ -123,20 +123,28 @@ function displayRecently(recently) {
     const pRecent = document.createElement("p");
     const spanRecent = document.createElement("span");
     const svg = `<svg role="img" height="24" width="24" aria-hidden="true" viewBox="0 0 24 24" data-encore-id="icon" class="play-btn"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg>`;
-
+    const svgFirstElement = `<svg role="img" height="24" width="24" aria-hidden="true" viewBox="0 0 24 24" data-encore-id="icon" class="pause-btn"><path d="M5.7 3a.7.7 0 0 0-.7.7v16.6a.7.7 0 0 0 .7.7h2.6a.7.7 0 0 0 .7-.7V3.7a.7.7 0 0 0-.7-.7H5.7zm10 0a.7.7 0 0 0-.7.7v16.6a.7.7 0 0 0 .7.7h2.6a.7.7 0 0 0 .7-.7V3.7a.7.7 0 0 0-.7-.7h-2.6z"></path></svg>`;
     divRecent.setAttribute("class", "recents");
     divRecentContent.setAttribute("class", "recents-content");
     divRecentImgContent.setAttribute("class", "recents-content_imgContent");
     divRecentImg.setAttribute("class", "recents-content_imgContent__img");
-    divRecentPlayBtn.setAttribute("class", "recents-content_imgContent__btn");
     btn.setAttribute("class", "playBtn");
     divRecentText.setAttribute("class", "recents-text");
     imgRecent.src = recent.image;
     imgRecent.alt = recent.alt;
     pRecent.textContent = recent.name;
     spanRecent.textContent = recent.from;
-    btn.innerHTML = svg;
-    //divRecentPlayBtn.style.display = "none";
+
+    if (index === 0) {
+      btn.innerHTML = svgFirstElement;
+      divRecentPlayBtn.setAttribute(
+        "class",
+        "recents-content_imgContent__btn selected"
+      );
+    } else {
+      btn.innerHTML = svg;
+      divRecentPlayBtn.setAttribute("class", "recents-content_imgContent__btn");
+    }
 
     recentlyListened.appendChild(liRecent);
     liRecent.appendChild(divRecent);

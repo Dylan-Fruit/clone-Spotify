@@ -1,10 +1,10 @@
 {
   "recently": [
     {
-      "name": "UTOPIA",
-      "from": "Travis Scott",
-      "image": "./assets/cover_utopia.jpg",
-      "alt": "utopia cover"
+      "name": "Blonde",
+      "from": "Frank Ocean",
+      "image": "./assets/cover_blond.jpg",
+      "alt": "Blond cover"
     },
     {
       "name": "Speak Now (Taylor's Version)",
@@ -25,17 +25,18 @@
       "alt": "Since I Have A Lover cover"
     },
     {
+      "name": "UTOPIA",
+      "from": "Travis Scott",
+      "image": "./assets/cover_utopia.jpg",
+      "alt": "utopia cover"
+    },
+    {
       "name": "Love Sick",
       "from": "Don Toliver",
       "image": "./assets/cover_lovesick.jpg",
       "alt": "Love Sick cover"
     },
-    {
-      "name": "Blonde",
-      "from": "Frank Ocean",
-      "image": "./assets/cover_blond.jpg",
-      "alt": "Blond cover"
-    },
+
     {
       "name": "METRO BOOMIN PRESENTS SPIDER-MAN: ACROSS THE SPIDER-VERSE (SOUNDTRACK FROM AND INSPIRED BY THE MOTION PICTURE)",
       "from": "Metro Boomin",

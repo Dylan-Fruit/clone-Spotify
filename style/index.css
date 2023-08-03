@@ -411,6 +411,7 @@ body .content {
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);
 }
 .hello-list_content__Text-btn .playBtn:hover {
   transform: scale(1.04);
@@ -487,6 +488,7 @@ body .content {
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);
 }
 .recently-listened_list #recently-list li .recents-content_imgContent__btn .playBtn:hover {
   transform: scale(1.04);
