@@ -17,7 +17,7 @@
   flex-direction: column;
   background-color: #000000;
   width: 301px;
-  height: 795px;
+  height: 820px;
   gap: 8px;
   padding: 8px;
 }
@@ -47,11 +47,21 @@
 .navbar-library {
   background-color: #121212;
   border-radius: 8px;
-  overflow: scroll;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+.navbar-library::-webkit-scrollbar {
+  display: none;
 }
 .navbar-library_top {
   display: flex;
   flex-direction: column;
+  background-color: #121212;
+  border-radius: 8px 8px 0 0;
+  z-index: 1;
+  position: absolute;
+  max-width: 283.75px;
+  width: 100%;
 }
 .navbar-library_top__title {
   display: flex;
@@ -72,6 +82,7 @@
 }
 .navbar-library_top__title .library p {
   color: #a7a7a7;
+  font-weight: 400;
 }
 .navbar-library_top__title .library:hover svg path {
   fill: #ffffff;
@@ -123,6 +134,8 @@
 }
 .navbar-library_content {
   padding: 0 8px 8px;
+  position: relative;
+  margin-top: 95px;
 }
 .navbar-library_content__search {
   padding: 2px 8px 0;
@@ -149,7 +162,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 8px 12px;
+  padding: 8px 0 12px 8px;
   cursor: pointer;
 }
 .navbar-library_content__search .droplist .displayed span {
@@ -245,23 +258,258 @@ body .content {
 }
 
 .main {
-  padding: 19px 40px;
+  padding: 19px 22px;
   margin: 8px 8px 8px 0;
   width: 1619px;
   background-color: #121212;
   border-radius: 8px;
+  overflow-y: scroll;
+  overflow: hidden;
+}
+.main .selected {
+  display: flex !important;
+}
+.main-content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+}
+.main .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
 }
 .main .header-buttons {
   display: flex;
   cursor: pointer;
+  gap: 8px;
 }
 .main .header-buttons_previous {
   margin-right: 20px;
 }
+.main .header-buttons_prev, .main .header-buttons_next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.6;
+  background-color: rgba(0, 0, 0, 0.7019607843);
+  border-radius: 100%;
+  height: 32px;
+  width: 32px;
+}
+.main .header-buttons_prev svg path, .main .header-buttons_next svg path {
+  fill: #ffffff;
+}
+.main .header-rightSide {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.main .header-rightSide_install {
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5411764706);
+  border-radius: 50px;
+  padding: 4px 12px;
+  cursor: pointer;
+}
+.main .header-rightSide_install span {
+  display: flex;
+  margin-right: 8px;
+}
+.main .header-rightSide_install span svg path {
+  fill: #ffffff;
+}
+.main .header-rightSide_install p {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+}
+.main .header-rightSide_install:hover {
+  transform: scale(1.04);
+}
+.main .header-rightSide_user {
+  display: flex;
+}
+.main .header-rightSide_user .user-btn {
+  background-color: rgba(0, 0, 0, 0.5411764706);
+  border-radius: 100%;
+}
+.main .header-rightSide_user .user-btn img {
+  display: flex;
+  margin: 4px;
+  width: 24px;
+  height: 24px;
+  object-fit: cover;
+  border-radius: 100%;
+}
+.main .header-rightSide_user:hover {
+  transform: scale(1.04);
+}
 
 .player {
   width: 100%;
-  height: 112px;
+  height: 80px;
+}
+
+.hello header {
+  margin-bottom: 16px;
+}
+.hello header h1 {
+  color: #ffffff;
+  font-size: 2rem;
+}
+.hello-list {
+  display: flex;
+}
+.hello-list #hello-list {
+  display: flex;
+  column-gap: 24px;
+  flex-wrap: wrap;
+}
+.hello-list_content {
+  display: flex;
+  width: 506.66px;
+  height: 80px;
+  background-color: rgba(255, 255, 255, 0.1019607843);
+  transition: background-color 0.3s ease;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+.hello-list_content:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.hello-list_content:hover .hello-list_content__Text-btn {
+  display: flex;
+}
+.hello-list_content__Img img {
+  height: 100%;
+  border-radius: 4px 0 0 4px;
+}
+.hello-list_content__Text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 16px;
+}
+.hello-list_content__Text p {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.hello-list_content__Text-btn {
+  display: none;
+}
+.hello-list_content__Text-btn .playBtn {
+  background-color: #1ed760;
+  border-radius: 100%;
+  height: 48px;
+  width: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hello-list_content__Text-btn .playBtn:hover {
+  transform: scale(1.04);
+}
+
+.recently-listened header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.recently-listened header p {
+  font-size: 14px;
+  color: #a6a6a6;
+  font-weight: bold;
+}
+.recently-listened header h1 {
+  color: #ffffff;
+}
+.recently-listened header h1,
+.recently-listened header p {
+  cursor: pointer;
+}
+.recently-listened header h1:hover,
+.recently-listened header p:hover {
+  text-decoration: underline;
+}
+.recently-listened_list #recently-list {
+  display: flex;
+  gap: 25px;
+}
+.recently-listened_list #recently-list li {
+  height: 253px;
+  width: 175px;
+}
+.recently-listened_list #recently-list li .recents {
+  padding: 16px;
+  background-color: #181818;
+  border-radius: 6px;
+  height: 100%;
+  width: 100%;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+.recently-listened_list #recently-list li .recents:hover {
+  background-color: #282828;
+}
+.recently-listened_list #recently-list li .recents:hover .recents-content_imgContent__btn {
+  display: flex;
+}
+.recently-listened_list #recently-list li .recents-content_imgContent {
+  width: 143px;
+  height: 143px;
+  position: relative;
+  margin-bottom: 16px;
+}
+.recently-listened_list #recently-list li .recents-content_imgContent__img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+.recently-listened_list #recently-list li .recents-content_imgContent__btn {
+  display: none;
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+}
+.recently-listened_list #recently-list li .recents-content_imgContent__btn .playBtn {
+  background-color: #1ed760;
+  border-radius: 100%;
+  height: 48px;
+  width: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.recently-listened_list #recently-list li .recents-content_imgContent__btn .playBtn:hover {
+  transform: scale(1.04);
+}
+.recently-listened_list #recently-list li .recents-text {
+  min-height: 62px;
+}
+.recently-listened_list #recently-list li .recents-text p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: middle;
+  max-width: 100%;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1rem;
+}
+.recently-listened_list #recently-list li .recents-text span {
+  color: #a6a6a6;
+  cursor: pointer;
+}
+.recently-listened_list #recently-list li .recents-text span:hover {
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=index.css.map */

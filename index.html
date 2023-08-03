@@ -4,6 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      sizes="32x32"
+      type="image/png"
+      href="https://open.spotifycdn.com/cdn/images/favicon32.b64ecc03.png"
+    />
+    <link
+      rel="icon"
+      sizes="16x16"
+      type="image/png"
+      href="https://open.spotifycdn.com/cdn/images/favicon16.1c487bff.png"
+    />
+    <link
+      rel="icon"
+      href="https://open.spotifycdn.com/cdn/images/favicon.0f31d2ea.ico"
+    />
     <link rel="stylesheet" href="./style/index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -163,18 +179,217 @@
       <main class="main">
         <header class="header">
           <div class="header-buttons">
-            <div class="header-buttons_previous">
-              <img src="./assets/previous.svg" alt="previous button" />
-            </div>
-            <div class="header-buttons_next">
-              <img src="./assets/next.svg" alt="next button" />
-            </div>
+            <button class="header-buttons_prev">
+              <svg
+                role="img"
+                height="16"
+                width="16"
+                aria-hidden="true"
+                class="prev-btn"
+                viewBox="0 0 16 16"
+                data-encore-id="icon"
+              >
+                <path
+                  d="M11.03.47a.75.75 0 0 1 0 1.06L4.56 8l6.47 6.47a.75.75 0 1 1-1.06 1.06L2.44 8 9.97.47a.75.75 0 0 1 1.06 0z"
+                ></path>
+              </svg>
+            </button>
+            <button class="header-buttons_next">
+              <svg
+                role="img"
+                height="16"
+                width="16"
+                aria-hidden="true"
+                class="next-btn"
+                viewBox="0 0 16 16"
+                data-encore-id="icon"
+              >
+                <path
+                  d="M4.97.47a.75.75 0 0 0 0 1.06L11.44 8l-6.47 6.47a.75.75 0 1 0 1.06 1.06L13.56 8 6.03.47a.75.75 0 0 0-1.06 0z"
+                ></path>
+              </svg>
+            </button>
           </div>
-          <div class="header-userMenu">
-            <div class="header-userMenu_closed"></div>
+          <div class="header-rightSide">
+            <div class="header-rightSide_install">
+              <span
+                ><svg
+                  role="img"
+                  height="16"
+                  width="16"
+                  aria-hidden="true"
+                  viewBox="0 0 16 16"
+                  data-encore-id="icon"
+                  class="download-icon"
+                >
+                  <path
+                    d="M4.995 8.745a.75.75 0 0 1 1.06 0L7.25 9.939V4a.75.75 0 0 1 1.5 0v5.94l1.195-1.195a.75.75 0 1 1 1.06 1.06L8 12.811l-.528-.528a.945.945 0 0 1-.005-.005L4.995 9.805a.75.75 0 0 1 0-1.06z"
+                  ></path>
+                  <path
+                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13z"
+                  ></path>
+                </svg>
+              </span>
+              <p>Installer l'appli</p>
+            </div>
+            <div class="header-rightSide_user">
+              <button class="user-btn">
+                <img src="./assets/profile_avatar.jpg" alt="profile avatar " />
+              </button>
+            </div>
           </div>
         </header>
-      </main>
+<div class="main-content">
+  <div class="hello">
+    <header>
+      <h1>Bonjour</h1>
+    </header>
+    <div class="hello-list">
+      <ul id="hello-list">
+        <li>
+          <div class="hello-list_content">
+            <div class="hello-list_content__Img">
+              <img src="./assets/cover_blond.jpg" alt="Blond cover" />
+            </div>
+            <div class="hello-list_content__Text">
+              <p>Blonde</p>
+              <div class="hello-list_content__Text-btn selected">
+                <button class="playBtn">
+                  <svg role="img" height="24" width="24" aria-hidden="true" viewBox="0 0 24 24" data-encore-id="icon" class="pause-btn"><path d="M5.7 3a.7.7 0 0 0-.7.7v16.6a.7.7 0 0 0 .7.7h2.6a.7.7 0 0 0 .7-.7V3.7a.7.7 0 0 0-.7-.7H5.7zm10 0a.7.7 0 0 0-.7.7v16.6a.7.7 0 0 0 .7.7h2.6a.7.7 0 0 0 .7-.7V3.7a.7.7 0 0 0-.7-.7h-2.6z"></path></svg>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="hello-list_content">
+            <div class="hello-list_content__Img">
+              <img src="./assets/cover_sn.jpg" alt="Speak now cover" />
+            </div>
+            <div class="hello-list_content__Text">
+              <p>Speak Now (Taylor's Version)</p>
+              <div class="hello-list_content__Text-btn">
+                <button class="playBtn">
+                  <svg
+                    role="img"
+                    height="24"
+                    width="24"
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    data-encore-id="icon"
+                    class="play-btn"
+                  >
+                    <path
+                      d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="hello-list_content">
+            <div class="hello-list_content__Img">
+              <img src="./assets/cover_utopia.jpg" alt="Utopia cover" />
+            </div>
+            <div class="hello-list_content__Text">
+              <p>UTOPIA</p>
+              <div class="hello-list_content__Text-btn">
+                <button class="playBtn">
+                  <svg
+                    role="img"
+                    height="24"
+                    width="24"
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    data-encore-id="icon"
+                    class="play-btn"
+                  >
+                    <path
+                      d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="hello-list_content">
+            <div class="hello-list_content__Img">
+              <img
+                src="./assets/cover_sial.jpg"
+                alt="Since I Have A lover cover"
+              />
+            </div>
+            <div class="hello-list_content__Text">
+              <p>Since I Have A Lover</p>
+              <div class="hello-list_content__Text-btn">
+                <button class="playBtn">
+                  <svg
+                    role="img"
+                    height="24"
+                    width="24"
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    data-encore-id="icon"
+                    class="play-btn"
+                  >
+                    <path
+                      d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="hello-list_content">
+            <div class="hello-list_content__Img">
+              <img
+                src="./assets/cover_lnd.jpg"
+                alt="Legends Never Die cover"
+              />
+            </div>
+            <div class="hello-list_content__Text">
+              <p>Legends Never Die</p>
+              <div class="hello-list_content__Text-btn">
+                <button class="playBtn">
+                  <svg
+                    role="img"
+                    height="24"
+                    width="24"
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    data-encore-id="icon"
+                    class="play-btn"
+                  >
+                    <path
+                      d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="recently-listened">
+    <header>
+      <h1>Écoutés récemment</h1>
+      <p>Tout afficher</p>
+    </header>
+    <div class="recently-listened_list">
+      <ul id="recently-list"></ul>
+    </div>
+  </div>
+</main>
+</div>
     </section>
     <section class="player"></section>
     <script src="app.js"></script>

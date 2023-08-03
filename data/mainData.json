@@ -1,0 +1,52 @@
+{
+  "recently": [
+    {
+      "name": "UTOPIA",
+      "from": "Travis Scott",
+      "image": "./assets/cover_utopia.jpg",
+      "alt": "utopia cover"
+    },
+    {
+      "name": "Speak Now (Taylor's Version)",
+      "from": "Taylor Swift",
+      "image": "./assets/cover_sn.jpg",
+      "alt": "Speak Now cover"
+    },
+    {
+      "name": "Legends Never Die",
+      "from": "Juice WRLD",
+      "image": "./assets/cover_lnd.jpg",
+      "alt": "Legends Never Die cover"
+    },
+    {
+      "name": "Since I Have A Lover",
+      "from": "6LACK",
+      "image": "./assets/cover_sial.jpg",
+      "alt": "Since I Have A Lover cover"
+    },
+    {
+      "name": "Love Sick",
+      "from": "Don Toliver",
+      "image": "./assets/cover_lovesick.jpg",
+      "alt": "Love Sick cover"
+    },
+    {
+      "name": "Blonde",
+      "from": "Frank Ocean",
+      "image": "./assets/cover_blond.jpg",
+      "alt": "Blond cover"
+    },
+    {
+      "name": "METRO BOOMIN PRESENTS SPIDER-MAN: ACROSS THE SPIDER-VERSE (SOUNDTRACK FROM AND INSPIRED BY THE MOTION PICTURE)",
+      "from": "Metro Boomin",
+      "image": "./assets/cover_across.jpg",
+      "alt": "Across the spider verse cover"
+    },
+    {
+      "name": "Dust In the Wind",
+      "from": "Kansas",
+      "image": "./assets/cover_ditw.jpg",
+      "alt": "Dust in the wind cover"
+    }
+  ]
+}

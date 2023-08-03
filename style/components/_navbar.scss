@@ -3,7 +3,7 @@
   flex-direction: column;
   background-color: $secondary_color;
   width: 301px;
-  height: 795px;
+  height: 820px;
   gap: 8px;
   padding: 8px;
   &-menu {
@@ -36,10 +36,20 @@
   &-library {
     background-color: $light_black;
     border-radius: 8px;
-    overflow: scroll;
+    overflow: hidden;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
     &_top {
       display: flex;
       flex-direction: column;
+      background-color: #121212;
+      border-radius: 8px 8px 0 0;
+      z-index: 1;
+      position: absolute;
+      max-width: 283.75px;
+      width: 100%;
       &__title {
         display: flex;
         align-items: center;
@@ -57,6 +67,7 @@
           }
           p {
             color: $dark_white;
+            font-weight: 400;
           }
           &:hover {
             svg {
@@ -118,6 +129,8 @@
     }
     &_content {
       padding: 0 8px 8px;
+      position: relative;
+      margin-top: 95px;
       &__search {
         padding: 2px 8px 0;
         display: flex;
@@ -149,7 +162,7 @@
             display: flex;
             align-items: center;
             gap: 8px;
-            padding: 8px 12px;
+            padding: 8px 0 12px 8px;
             cursor: pointer;
             span {
               color: $primary_color;

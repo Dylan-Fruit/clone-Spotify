@@ -1,3 +1,4 @@
+// Récupération et affichage des données
 function getArtists() {
   fetch("./data/dataArtists.json")
     .then((response) => response.json())
@@ -16,6 +17,13 @@ function getAlbums() {
   fetch("./data/dataArtists.json")
     .then((response) => response.json())
     .then((data) => displayAlbums(data.albums))
+    .catch((error) => console.log(error));
+}
+
+function getRecently() {
+  fetch("./data/mainData.json")
+    .then((response) => response.json())
+    .then((data) => displayRecently(data.recently))
     .catch((error) => console.log(error));
 }
 
@@ -100,14 +108,73 @@ function displayAlbums(albums) {
   });
 }
 
+function displayRecently(recently) {
+  const recentlyListened = document.getElementById("recently-list");
+  recently.forEach((recent) => {
+    const liRecent = document.createElement("li");
+    const divRecent = document.createElement("div");
+    const divRecentContent = document.createElement("div");
+    const divRecentImgContent = document.createElement("div");
+    const divRecentImg = document.createElement("div");
+    const divRecentPlayBtn = document.createElement("div");
+    const btn = document.createElement("button");
+    const divRecentText = document.createElement("div");
+    const imgRecent = document.createElement("img");
+    const pRecent = document.createElement("p");
+    const spanRecent = document.createElement("span");
+    const svg = `<svg role="img" height="24" width="24" aria-hidden="true" viewBox="0 0 24 24" data-encore-id="icon" class="play-btn"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg>`;
+
+    divRecent.setAttribute("class", "recents");
+    divRecentContent.setAttribute("class", "recents-content");
+    divRecentImgContent.setAttribute("class", "recents-content_imgContent");
+    divRecentImg.setAttribute("class", "recents-content_imgContent__img");
+    divRecentPlayBtn.setAttribute("class", "recents-content_imgContent__btn");
+    btn.setAttribute("class", "playBtn");
+    divRecentText.setAttribute("class", "recents-text");
+    imgRecent.src = recent.image;
+    imgRecent.alt = recent.alt;
+    pRecent.textContent = recent.name;
+    spanRecent.textContent = recent.from;
+    btn.innerHTML = svg;
+    //divRecentPlayBtn.style.display = "none";
+
+    recentlyListened.appendChild(liRecent);
+    liRecent.appendChild(divRecent);
+    divRecent.appendChild(divRecentContent);
+    divRecentContent.appendChild(divRecentImgContent);
+    divRecentImgContent.appendChild(divRecentImg);
+    divRecentImg.appendChild(imgRecent);
+    divRecentImgContent.appendChild(divRecentPlayBtn);
+    divRecentPlayBtn.appendChild(btn);
+    divRecentContent.appendChild(divRecentText);
+    divRecentText.appendChild(pRecent);
+    divRecentText.appendChild(spanRecent);
+  });
+}
+
 function loadContent() {
-  Promise.all([getArtists(), getPlaylists(), getAlbums()])
-    .then(([artists, playlists, albums]) => {
+  Promise.all([getArtists(), getPlaylists(), getAlbums(), getRecently()])
+    .then(([artists, playlists, albums, recently]) => {
       displayArtists(artists);
       displayPlaylists(playlists);
       displayAlbums(albums);
+      displayRecently(recently);
     })
     .catch((error) => console.log(error));
 }
 
 window.onload = loadContent;
+
+//Event on scroll
+
+const navbarTop = document.querySelector(".navbar-library_top");
+const contentLibrary = document.querySelector(".navbar-library");
+
+contentLibrary.addEventListener("scroll", (e) => {
+  if (contentLibrary.scrollTop > 0) {
+    navbarTop.style.boxShadow = "0 6px 10px rgba(0,0,0,.6)";
+  } else {
+    // Si la position de scroll est en haut, retire le style
+    navbarTop.style.boxShadow = "none";
+  }
+});

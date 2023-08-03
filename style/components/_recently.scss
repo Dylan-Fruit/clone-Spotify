@@ -1,0 +1,102 @@
+.recently-listened {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    p {
+      font-size: 14px;
+      color: #a6a6a6;
+      font-weight: bold;
+    }
+    h1 {
+      color: $primary_color;
+    }
+    h1,
+    p {
+      cursor: pointer;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  &_list {
+    #recently-list {
+      display: flex;
+      gap: 25px;
+      li {
+        height: 253px;
+        width: 175px;
+        .recents {
+          padding: 16px;
+          background-color: #181818;
+          border-radius: 6px;
+          height: 100%;
+          width: 100%;
+          transition: background-color 0.3s ease;
+          cursor: pointer;
+          &:hover {
+            background-color: #282828;
+            .recents-content_imgContent__btn {
+              display: flex;
+            }
+          }
+          &-content {
+            &_imgContent {
+              width: 143px;
+              height: 143px;
+              position: relative;
+              margin-bottom: 16px;
+              &__img {
+                img {
+                  width: 100%;
+                  height: 100%;
+                  border-radius: 4px;
+                  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+                }
+              }
+              &__btn {
+                display: none;
+                position: absolute;
+                bottom: 8px;
+                right: 8px;
+                .playBtn {
+                  background-color: #1ed760;
+                  border-radius: 100%;
+                  height: 48px;
+                  width: 48px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  &:hover {
+                    transform: scale(1.04);
+                  }
+                }
+              }
+            }
+          }
+          &-text {
+            min-height: 62px;
+            p {
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              vertical-align: middle;
+              max-width: 100%;
+              color: $primary_color;
+              font-weight: bold;
+              font-size: 1rem;
+            }
+            span {
+              color: #a6a6a6;
+              cursor: pointer;
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
